@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Global config | Fuse.js</title>
+    <meta name="generator" content="VuePress 1.8.3">
+    <link rel="apple-touch-icon" size="57x57" href="/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" size="60x60" href="/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" size="72x72" href="/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" size="76x76" href="/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" size="114x114" href="/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" size="120x120" href="/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" size="144x144" href="/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" size="152x152" href="/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" size="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" size="192x192" href="/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" size="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" size="96x96" href="/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" size="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/manifest.json">
+    <script>
+      (function(){
+        var bsa_optimize=document.createElement('script');
+        bsa_optimize.type='text/javascript';
+        bsa_optimize.async=true;
+        bsa_optimize.src='https://cdn4.buysellads.net/pub/fusejs.js?'+(new Date()-new Date()%600000);
+        (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
+      })();
+      </script>
+    <meta name="description" content="Lightweight fuzzy-search library, in JavaScript">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="4nm40QLVcDJmEJSAbrMfZ7fpBJZIXL1oSngBAYrZopY">
+    
+    <link rel="preload" href="/assets/css/0.styles.d97f87b5.css" as="style"><link rel="preload" href="/assets/js/app.99a80960.js" as="script"><link rel="preload" href="/assets/js/11.16337c94.js" as="script"><link rel="preload" href="/assets/js/10.e57ca0df.js" as="script"><link rel="preload" href="/assets/js/18.2fef9d9e.js" as="script"><link rel="preload" href="/assets/js/8.3ddd07a6.js" as="script"><link rel="prefetch" href="/assets/js/1.8a759c7f.js"><link rel="prefetch" href="/assets/js/12.8ff7e6f5.js"><link rel="prefetch" href="/assets/js/13.7e10273c.js"><link rel="prefetch" href="/assets/js/14.ee41ccbd.js"><link rel="prefetch" href="/assets/js/15.cbaaeaff.js"><link rel="prefetch" href="/assets/js/16.8b9ae1d6.js"><link rel="prefetch" href="/assets/js/17.20fe4217.js"><link rel="prefetch" href="/assets/js/19.5778714c.js"><link rel="prefetch" href="/assets/js/2.dfe6fcab.js"><link rel="prefetch" href="/assets/js/20.4197d65d.js"><link rel="prefetch" href="/assets/js/21.8eb55d59.js"><link rel="prefetch" href="/assets/js/22.40d56798.js"><link rel="prefetch" href="/assets/js/23.677d9cb0.js"><link rel="prefetch" href="/assets/js/24.d49d20de.js"><link rel="prefetch" href="/assets/js/25.b3ef1b52.js"><link rel="prefetch" href="/assets/js/26.a747e769.js"><link rel="prefetch" href="/assets/js/27.b6cf0975.js"><link rel="prefetch" href="/assets/js/28.86537cec.js"><link rel="prefetch" href="/assets/js/29.263bc396.js"><link rel="prefetch" href="/assets/js/3.570b1946.js"><link rel="prefetch" href="/assets/js/30.3c9e8c4a.js"><link rel="prefetch" href="/assets/js/31.34253600.js"><link rel="prefetch" href="/assets/js/32.2e078a29.js"><link rel="prefetch" href="/assets/js/4.e30e532e.js"><link rel="prefetch" href="/assets/js/5.f9bca363.js"><link rel="prefetch" href="/assets/js/6.28bf31bc.js"><link rel="prefetch" href="/assets/js/7.b52974b2.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d97f87b5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="Fuse.js" class="logo"> <span class="site-name can-hide">Fuse.js</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/team/" class="nav-link">
+  Team
+</a></div><div class="nav-item"><a href="/support/" class="nav-link">
+  Support Fuse.js
+</a></div><div class="nav-item"><a href="https://github.com/krisk/Fuse/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Release Notes
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/krisk/fuse" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/team/" class="nav-link">
+  Team
+</a></div><div class="nav-item"><a href="/support/" class="nav-link">
+  Support Fuse.js
+</a></div><div class="nav-item"><a href="https://github.com/krisk/Fuse/releases" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Release Notes
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/krisk/fuse" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav> <div class="carbon-ads"></div> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Getting Started</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/getting-started/installation.html" class="sidebar-link">Installation</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/getting-started/different-builds.html" class="sidebar-link">Explanation of Different Builds</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><a href="/demo.html" class="sidebar-link">Live Demo</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>API Reference</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/api/options.html" class="sidebar-link">Options</a></li><li><a href="/api/config.html" aria-current="page" class="active sidebar-link">Global config</a></li><li><a href="/api/methods.html" class="sidebar-link">Methods</a></li><li><a href="/api/indexing.html" class="sidebar-link">Indexing</a></li><li><a href="/api/query.html" class="sidebar-link">Logical Query Operators</a></li></ul></section></li><li><a href="/examples.html" class="sidebar-link">Examples</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/examples.html#search-string-array" class="sidebar-link">Search String Array</a></li><li class="sidebar-sub-header"><a href="/examples.html#search-object-array" class="sidebar-link">Search Object Array</a></li><li class="sidebar-sub-header"><a href="/examples.html#nested-search" class="sidebar-link">Nested Search</a></li><li class="sidebar-sub-header"><a href="/examples.html#weighted-search" class="sidebar-link">Weighted Search</a></li><li class="sidebar-sub-header"><a href="/examples.html#extended-search" class="sidebar-link">Extended Search</a></li></ul></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Concepts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/concepts/scoring-theory.html" class="sidebar-link">Scoring Theory</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="global-config"><a href="#global-config" class="header-anchor">#</a> Global config</h1> <p>You can access all <a href="/api/options.html">options</a> above via <code>Fuse.config</code>. This is useful if you want to override default options for all Fuse instances.</p> <p><strong>Example</strong>:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">getFn</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> path</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Use the default `get` function</span>
+    <span class="token keyword">const</span> value <span class="token operator">=</span> Fuse<span class="token punctuation">.</span>config<span class="token punctuation">.</span><span class="token function">getFn</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> path<span class="token punctuation">)</span>
+    <span class="token comment">// ... do something with `value`</span>
+    <span class="token keyword">return</span> value
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="donate-link-wrapper"><strong>❤️️ Fuse.js? Support its development with a small donation.</strong> <br> <a href="/support.html" class="donate-btn">Donate</a></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/krisk/fuse/edit/master/docs/api/config.md" target="_blank" rel="noopener noreferrer">Edit this page on GitHub</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">1/1/2021, 6:58:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/api/options.html" class="prev">
+        Options
+      </a></span> <span class="next"><a href="/api/methods.html">
+        Methods
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.99a80960.js" defer></script><script src="/assets/js/11.16337c94.js" defer></script><script src="/assets/js/10.e57ca0df.js" defer></script><script src="/assets/js/18.2fef9d9e.js" defer></script><script src="/assets/js/8.3ddd07a6.js" defer></script>
+  </body>
+</html>
