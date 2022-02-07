@@ -10,13 +10,13 @@ import IncludeMatch from './IncludeMatch'
 // ❗Order is important. DO NOT CHANGE.
 const searchers = [
   ExactMatch,
-  IncludeMatch,
   PrefixExactMatch,
   InversePrefixExactMatch,
   InverseSuffixExactMatch,
   SuffixExactMatch,
   InverseExactMatch,
-  FuzzyMatch
+  FuzzyMatch,
+  IncludeMatch
 ]
 
 const searchersLen = searchers.length

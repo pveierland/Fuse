@@ -32,10 +32,10 @@ export default class FuzzyMatch extends BaseMatch {
     return 'fuzzy'
   }
   static get multiRegex() {
-    return /^"(.*)"$/
+    return /^~"(.*)"$/
   }
   static get singleRegex() {
-    return /^(.*)$/
+    return /^~(.*)$/
   }
   search(text) {
     return this._bitapSearch.searchIn(text)

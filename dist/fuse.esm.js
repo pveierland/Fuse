@@ -1,7 +1,7 @@
 /**
  * Fuse.js v6.5.3 - Lightweight fuzzy-search (http://fusejs.io)
  *
- * Copyright (c) 2021 Kiro Risk (http://kiro.me)
+ * Copyright (c) 2022 Kiro Risk (http://kiro.me)
  * All Rights Reserved. Apache Software License 2.0
  *
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -223,6 +223,9 @@ const MatchOptions = {
 };
 
 const BasicOptions = {
+  // Configure the default match used for searching. The prefix token of the default match will
+  // be optional. The prefix token of fuzzy-match is '~'.
+  defaultMatch: 'fuzzy-match',
   // When `true`, the algorithm continues searching to the end of the input even if a perfect
   // match is found before the end of the same input.
   isCaseSensitive: false,
@@ -1064,10 +1067,10 @@ class FuzzyMatch extends BaseMatch {
     return 'fuzzy'
   }
   static get multiRegex() {
-    return /^"(.*)"$/
+    return /^~"(.*)"$/
   }
   static get singleRegex() {
-    return /^(.*)$/
+    return /^~(.*)$/
   }
   search(text) {
     return this._bitapSearch.searchIn(text)
@@ -1084,10 +1087,10 @@ class IncludeMatch extends BaseMatch {
     return 'include'
   }
   static get multiRegex() {
-    return /^'"(.*)"$/
+    return /^"(.*)"$/
   }
   static get singleRegex() {
-    return /^'(.*)$/
+    return /^(.*)$/
   }
   search(text) {
     let location = 0;
@@ -1115,13 +1118,13 @@ class IncludeMatch extends BaseMatch {
 // ❗Order is important. DO NOT CHANGE.
 const searchers = [
   ExactMatch,
-  IncludeMatch,
   PrefixExactMatch,
   InversePrefixExactMatch,
   InverseSuffixExactMatch,
   SuffixExactMatch,
   InverseExactMatch,
-  FuzzyMatch
+  FuzzyMatch,
+  IncludeMatch
 ];
 
 const searchersLen = searchers.length;

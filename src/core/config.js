@@ -13,6 +13,8 @@ export const MatchOptions = {
 }
 
 export const BasicOptions = {
+  // Configure the default match used for searching.
+  defaultMatch: 'fuzzy-match',
   // When `true`, the algorithm continues searching to the end of the input even if a perfect
   // match is found before the end of the same input.
   isCaseSensitive: false,

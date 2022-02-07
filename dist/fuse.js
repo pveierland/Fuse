@@ -1,7 +1,7 @@
 /**
  * Fuse.js v6.5.3 - Lightweight fuzzy-search (http://fusejs.io)
  *
- * Copyright (c) 2021 Kiro Risk (http://kiro.me)
+ * Copyright (c) 2022 Kiro Risk (http://kiro.me)
  * All Rights Reserved. Apache Software License 2.0
  *
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -94,14 +94,14 @@
       throw new TypeError("Super expression must either be null or a function");
     }
 
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        writable: true,
+        configurable: true
+      }
+    });
     Object.defineProperty(subClass, "prototype", {
-      value: Object.create(superClass && superClass.prototype, {
-        constructor: {
-          value: subClass,
-          writable: true,
-          configurable: true
-        }
-      }),
       writable: false
     });
     if (superClass) _setPrototypeOf(subClass, superClass);
@@ -410,6 +410,9 @@
     minMatchCharLength: 1
   };
   var BasicOptions = {
+    // Configure the default match used for searching. The prefix token of the default match will
+    // be optional. The prefix token of fuzzy-match is '~'.
+    defaultMatch: 'fuzzy-match',
     // When `true`, the algorithm continues searching to the end of the input even if a perfect
     // match is found before the end of the same input.
     isCaseSensitive: false,
@@ -1438,12 +1441,12 @@
     }, {
       key: "multiRegex",
       get: function get() {
-        return /^"(.*)"$/;
+        return /^~"(.*)"$/;
       }
     }, {
       key: "singleRegex",
       get: function get() {
-        return /^(.*)$/;
+        return /^~(.*)$/;
       }
     }]);
 
@@ -1489,19 +1492,19 @@
     }, {
       key: "multiRegex",
       get: function get() {
-        return /^'"(.*)"$/;
+        return /^"(.*)"$/;
       }
     }, {
       key: "singleRegex",
       get: function get() {
-        return /^'(.*)$/;
+        return /^(.*)$/;
       }
     }]);
 
     return IncludeMatch;
   }(BaseMatch);
 
-  var searchers = [ExactMatch, IncludeMatch, PrefixExactMatch, InversePrefixExactMatch, InverseSuffixExactMatch, SuffixExactMatch, InverseExactMatch, FuzzyMatch];
+  var searchers = [ExactMatch, PrefixExactMatch, InversePrefixExactMatch, InverseSuffixExactMatch, SuffixExactMatch, InverseExactMatch, FuzzyMatch, IncludeMatch];
   var searchersLen = searchers.length; // Regex to split by spaces, but keep anything in quotes together
 
   var SPACE_RE = / +(?=([^\"]*\"[^\"]*\")*[^\"]*$)/;

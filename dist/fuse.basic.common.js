@@ -1,7 +1,7 @@
 /**
  * Fuse.js v6.5.3 - Lightweight fuzzy-search (http://fusejs.io)
  *
- * Copyright (c) 2021 Kiro Risk (http://kiro.me)
+ * Copyright (c) 2022 Kiro Risk (http://kiro.me)
  * All Rights Reserved. Apache Software License 2.0
  *
  * http://www.apache.org/licenses/LICENSE-2.0
@@ -323,6 +323,9 @@ var MatchOptions = {
   minMatchCharLength: 1
 };
 var BasicOptions = {
+  // Configure the default match used for searching. The prefix token of the default match will
+  // be optional. The prefix token of fuzzy-match is '~'.
+  defaultMatch: 'fuzzy-match',
   // When `true`, the algorithm continues searching to the end of the input even if a perfect
   // match is found before the end of the same input.
   isCaseSensitive: false,

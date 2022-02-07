@@ -12,10 +12,10 @@ export default class IncludeMatch extends BaseMatch {
     return 'include'
   }
   static get multiRegex() {
-    return /^'"(.*)"$/
+    return /^"(.*)"$/
   }
   static get singleRegex() {
-    return /^'(.*)$/
+    return /^(.*)$/
   }
   search(text) {
     let location = 0
